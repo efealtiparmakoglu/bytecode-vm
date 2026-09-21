@@ -1,0 +1,4 @@
+/bytecode-vm
+*.o
+plot_tests
+.DS_Store
