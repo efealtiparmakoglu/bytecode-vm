@@ -4,10 +4,10 @@ CFLAGS  ?= -O2 -std=c11 -Wall -Wextra -Wpedantic
 all: bytecode-vm
 
 bytecode-vm: src/main.c src/vm.c src/vm.h
-	$(CC) $(CFLAGS) -o $@ src/main.c src/vm.c
+	$(CC) $(CFLAGS) -o $@ src/main.c src/vm.c -lm
 
 vm_tests: tests/vm_tests.c src/vm.c src/vm.h
-	$(CC) $(CFLAGS) -o vm_tests tests/vm_tests.c src/vm.c
+	$(CC) $(CFLAGS) -o vm_tests tests/vm_tests.c src/vm.c -lm
 
 test: bytecode-vm vm_tests
 	./vm_tests
