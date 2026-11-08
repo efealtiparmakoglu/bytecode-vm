@@ -2,3 +2,5 @@
 *.o
 plot_tests
 .DS_Store
+/vm_tests
+/vm_tests
